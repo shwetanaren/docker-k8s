@@ -1,0 +1,23 @@
+# Root-level Git ignore
+
+# Node
+node_modules/
+npm-debug.log
+
+# Logs
+*.log
+*.log.*
+
+# System
+.DS_Store
+
+# Environment files
+.env
+back-end/.env
+front-end/.env
+
+# Docker
+pgdata/
+
+# Optional: Build output
+front-end/dist/
