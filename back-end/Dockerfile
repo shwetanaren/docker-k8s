@@ -12,4 +12,5 @@ RUN npm install -g knex
 
 EXPOSE 3001
 
-CMD ["sh", "-c", "npx knex migrate:latest && node server.js"]
+CMD ["sh", "-c", "sleep 10 && npx knex migrate:latest && node server.js"]
+

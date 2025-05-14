@@ -23,7 +23,7 @@ class Register extends React.Component {
 
   onSubmitSignIn = () => {
     // event.preventDefault(); // Prevents the form from reloading the page
-    fetch("https://server-image-recognition-production.up.railway.app/register", {
+    fetch(`${import.meta.env.VITE_API_URL}/register`, {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

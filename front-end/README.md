@@ -4,8 +4,12 @@ This is my first ever full stack application! Fancy Genie lets users sign up, si
 
 ## Hosted Application
 
+Check out the app under deployment to K8S 
+
 Check out the live app on Netlify:  
 [https://fancy-genie-6f67ae.netlify.app/](https://fancy-genie-6f67ae.netlify.app/)
+
+
 
 ## Features
 

@@ -1,5 +1,7 @@
 
 // Importing Express and other apps:
+import dotenv from 'dotenv';
+dotenv.config();
 import express from "express"
 import bcrypt from "bcryptjs";
 import cors from 'cors';
@@ -13,18 +15,18 @@ import * as image from './controllers/image.js';
 import * as clarifai from './controllers/clarifai.js';
 import knexConfig from './knexfile.js';
 
-import dotenv from 'dotenv';
-dotenv.config();
+
 
 //Initialize an Express application:
 const app = express();
 
 
 // Or, to restrict it to your Netlify domain:
+const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',') || '*';
+
 app.use(cors({
-    origin: 'https://fancy-genie-6f67ae.netlify.app'
-  }));
-  
+  origin: allowedOrigins
+}));
 
 
 //Defining a Port: Setting a port number for the server to listen on.
