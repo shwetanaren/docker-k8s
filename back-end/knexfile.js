@@ -5,8 +5,8 @@ export default {
     development:{
         client: 'pg',
     connection: process.env.DATABASE_URL
-    ? { connectionString: process.env.DATABASE_URL, 
-        ssl: { rejectUnauthorized: false }
+     ? { connectionString: process.env.DATABASE_URL, 
+        // ssl: { rejectUnauthorized: false }
     } 
     : {
       host: process.env.DB_HOST || '127.0.0.1',

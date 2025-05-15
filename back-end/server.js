@@ -37,8 +37,6 @@ const PORT = process.env.PORT || 3000;
 // app.use(cors());
 
 
-
-
   app.get('/test', (req, res) => {
     res.json({ message: "CORS is working!" });
   });
@@ -62,7 +60,9 @@ app.post('/signin', (req,res) => {signin.handleSignin(req,res,db,bcrypt);});
 
 // dependency injection implmentation to execute the controllers properly.
 
-app.post('/register', (req,res) => {register.handleRegister(req,res,db,bcrypt);});
+app.post('/register', (req,res) => {
+  console.log("✅ register route HIT");
+  register.handleRegister(req,res,db,bcrypt);});
 
 
 app.get('/profile/:id',(req,res) => {profile.handleProfile(req,res,db) ;});
